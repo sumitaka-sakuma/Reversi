@@ -1,4 +1,4 @@
-console.log('hello')
+let currentColor = 'black'
 
 window.onload = () => {
 
@@ -17,7 +17,16 @@ window.onload = () => {
 
     Array.from(document.getElementsByClassName('grid-item')).forEach(element => {
         element.addEventListener('click', (event) => {
-            event.target.dataset.color = "white"
+            event.target.dataset.color = currentColor
+            currentColor = enemyColor()
         })
     })
+}
+
+const enemyColor = () => {
+    if(currentColor == 'black'){
+        return 'white'
+    }else{
+        return 'black'
+    }
 }
