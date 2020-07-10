@@ -19,3 +19,19 @@ body{
 .grid-item{
     background-color: green;
 }
+
+[data-color="black"]::after,
+[data-color="white"]::after{
+    content: '';
+    display: block;
+    height: 100%;
+    border-radius: 50%;
+}
+
+[data-color="black"]::after{
+    background-color: black;
+}
+
+[data-color="white"]::after{
+    background-color: white;
+}
